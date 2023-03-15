@@ -44,5 +44,23 @@
         left: 50px;
      }
  }
+ @media screen and (min-width: 600px) {
+    #showScore {
+        position: relative;
+        background: linear-gradient(orange,rgb(99, 99, 16)) !important;
+        border: 1px solid gray;
+        height: 7vh !important;
+        width: 11vw !important;
+        top: -60px !important;
+        border-radius: 10px !important;
+        text-align: center !important;
+        text-shadow: 5px !important;
+        padding: 10px !important;
+        font-weight: bold !important;
+        font-size: 18px !important;
+        color: beige !important;
+        left: 300px;
+     }
+ }
     
  
