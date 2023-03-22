@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grade Checker</title>
+    <link rel="icon" href="./image/grade.jpg">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
@@ -23,44 +24,57 @@
 
     <script>
         function checkScore() {
+            
+            
+            
             // alert("I am working")
             var score = document.getElementById("score").value;
-            if (score >= 0 && score <= 39) 
+            if (score >= 0 && score <= 39) {
+            var songOfFailure = new Audio("audio/failure...mp3")
                 // alert("You failed")
                 var result = "YOU FAILED";
                 showScore.innerHTML = result;
                 showScore.style.color = "red";
+                songOfFailure.play();
+            }
 
-                if (score >=40 && score <=44)
+             else if (score >=40 && score <=44){
+                var songGood = new Audio("audio/good.mp3")
                 var result = "PASS"
                 showScore.innerHTML = result;
                 showScore.style.color = "blue";
+                songGood.play();}
 
-                if (score >=45 && score <=49)
+               else if (score >=45 && score <=49){
+                var songAverage = new Audio("audio/average..mp3")
                 var result = "Average Mark"
                 showScore.innerHTML = result;
                 showScore.style.color = "blue";
+                songAverage.play();}
 
-                if (score >=50 && score <=59)
+                else if (score >=50 && score <=59){
                 var result = "CREDIT"
                 showScore.innerHTML = result;
-                showScore.style.color = "yellow";
+                showScore.style.color = "yellow";}
 
-                if (score >=60 && score <=69)
+                else if (score >=60 && score <=69){
                 var result = "GOOD"
                 showScore.innerHTML = result;
-                showScore.style.color = "black";
+                showScore.style.color = "black";}
 
-                if (score >=70 && score <=100)
+            
+                else if (score >=70 && score <=100){
+                var songExcellent = new Audio("audio/excellent..mp3")
                 var result = "EXCELLENT"
                 showScore.innerHTML = result;
                 showScore.style.color = "green";
-                
+                songExcellent.play();
+                }
 
-                if (score >100)
+                else if (score >100){
                 var result = "Invalid Score"
                 showScore.innerHTML = result;
-                showScore.style.color = "Green";
+                showScore.style.color = "Green";}
 
 
 
